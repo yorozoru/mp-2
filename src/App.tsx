@@ -5,9 +5,9 @@ import { Summoners } from './interfaces/Summoners';
 
 
 const ParentDiv=styled.div`
-    width: 80vw;
+    width: 100;
     margin: auto;
-    border: 5px darkgoldenrod solid;
+    border: 10px #1E2328 solid;
 `;
 
 
@@ -19,6 +19,7 @@ export default function App(){
     async function fetchData(): Promise<void> {
       const rawData = await fetch("https://ddragon.leagueoflegends.com/cdn/14.3.1/data/en_US/champion.json");
       const result = await rawData.json();
+      console.log(result)
       const championsData = Object.values(result.data).map((champ: any) => ({
         name: champ.name,
         id: champ.id,
@@ -30,7 +31,8 @@ export default function App(){
   }
   fetchData()
       .then(() => console.log("Data fetched successfully"))
-  })
+      .catch((e: Error) => console.log("There was the error: " + e));
+    }, [data.length]);
 
 return(
   <ParentDiv>
