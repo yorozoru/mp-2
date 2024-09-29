@@ -18,7 +18,7 @@ const TagWrapper = styled.div`
 `;
 
 const Tag = styled.div<{ tagtype: string }>`
-    padding: 0.04em 0.2em 0.2em 0.2em;
+    padding: 0.05em 0.2em 0.2em 0.2em;
     margin: 0.1em 0.2em;
     border-radius: 4px;
     color: white;     
