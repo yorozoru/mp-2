@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # mp-2
 =======
 # React + TypeScript + Vite
