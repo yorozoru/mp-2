@@ -12,7 +12,6 @@ const AllTags = styled.div`
 `;
 
 const TagWrapper = styled.div`
-    display: flex;
     padding: 1% 
     margin: 1%
 `;
@@ -21,7 +20,7 @@ const Tag = styled.div<{ tagtype: string }>`
     padding: 0.05em 0.2em 0.2em 0.2em;
     margin: 0.1em 0.2em;
     border-radius: 4px;
-    color: white;     
+    color: white;    
     background-color: ${({ tagtype }) => {
         switch (tagtype) {
             case 'Fighter':
